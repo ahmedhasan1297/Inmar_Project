@@ -206,14 +206,14 @@ app.service("delete_contact_info",function($http){
                      url: "delete_contact.php", 
                      headers:{'content-type':'application/x-www-form-urlencoded'}, 
                      transformRequest: function(obj) {
-                                alert(groupid);
+                               // alert(groupid);
                                                   var str = [];
                                                   for(var p in obj)
                                                   {
                                                         //console.log(p);
                                                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                                                   }                                                      
-                                                  alert(str.join("&"));
+                                               //   alert(str.join("&"));
                                                     return str.join("&");
                                             },
                      data: { 
@@ -232,7 +232,7 @@ app.service("delete_contact_info",function($http){
               //alert(data); 
                          //v.message = data; 
                          //alert(JSON.stringify(data));
-                         alert(data);
+                        // alert(data);
                          v.recieve=data;
                          //alert("Group created successfully");
                          //v.onpageload();
@@ -270,7 +270,7 @@ app.service("delete_contact_info",function($http){
             }
             $scope.send_contact=function(){
                //alert("hai");
-               alert($scope.temp_group_id);
+              // alert($scope.temp_group_id);
                send_create_con.send_con_details($scope);
                //console.log($scope.collect);
             }
@@ -306,16 +306,16 @@ app.service("delete_contact_info",function($http){
               
 	   	      //alert(document.cookie);
 	   	      var c=document.cookie;
-            alert(c);
+           // alert(c);
 	   	      var mytest1=c.split(';');
-	   	      alert(mytest1[0]+"  "+mytest1[1]);
+	   	      //alert(mytest1[0]+"  "+mytest1[1]);
 
 	   	      var j=mytest1[1].search("=");
               var arr=mytest1[1].slice(j+1,mytest1[1].length);
               var k=arr.search("%");
               var email_of_user=arr.slice(0,j);
               var email_of_user=email_of_user.concat("@inmar.com");
-              alert(email_of_user);
+              //alert(email_of_user);
              // alert("hai new user");
              // alert(arr);
 
