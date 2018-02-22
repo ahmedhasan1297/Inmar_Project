@@ -10,7 +10,9 @@
 		 if ($conn->connect_error) {
 		    die("Connection failed: " . $conn->connect_error);
 		 } 
-		 $sql1 = "INSERT INTO contacts VALUES ('$name', '$phone', '$email_c','$email_u','NULL') where groupid='$groupid' and phone='$phone'";
+
+
+		 $sql1 = "UPDATE contacts SET groupid='NULL' where groupid='$groupid' and phone='$phone'";
 		 $result = $conn->query($sql1);
 
 		 $sql = "SELECT  * FROM contacts where groupid='$groupid'";

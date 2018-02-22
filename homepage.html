@@ -98,7 +98,7 @@ app.service("send_create_con",function($http){
                                                         //console.log(p);
                                                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                                                   }                                                      
-                                                  alert(str.join("&"));
+                                                  //alert(str.join("&"));
                                                     return str.join("&");
                                             },
                      data: {
@@ -323,6 +323,7 @@ app.service("delete_contact_info",function($http){
 	   		  //var check=document.cookie;
 	   		  var i=mytest1[0].search("=");
 	   		  i=i+1;
+          alert(mytest1[0].charAt(i));
 	   		  if(mytest1[0].charAt(i)=="x")
 	   		  {
           			//alert("working good");
@@ -330,6 +331,7 @@ app.service("delete_contact_info",function($http){
        		  else
        		  {
        		  	console.log(document.cookie);
+              alert("no cookie");
        	      	window.location.assign("login.html");
 
        		  }

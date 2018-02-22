@@ -1,4 +1,3 @@
-
     <?php
 		$servername = "localhost";
 		$username = "root";
@@ -20,7 +19,7 @@
 			$adhar=$_POST['adhar'];
 
 
-		$sql = "INSERT INTO personal_info(firstname,lastname,phone,adhar,email_u,password,gender ) VALUES ('$firstname', '$lastname', '$mobileno','$adhar','$mail','$pass')";
+		$sql = "INSERT INTO personal_info(firstname,lastname,phone,adhar,email_u,password) VALUES ('$firstname', '$lastname', '$mobileno','$adhar','$mail','$pass')";
 
 
 		if ($conn->query($sql) === TRUE) {

@@ -16,7 +16,7 @@ $conn = new mysqli($servername, $username, $password_ser, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT email_u,password FROM personal_info where email_u='example7@inmar.com' ";
+$sql = "SELECT email_u,password FROM personal_info where email_u='$email_u' ";
 $result = $conn->query($sql);
 
  if ($result->num_rows == 1) {
@@ -33,13 +33,13 @@ else {
    if((($email_u==$email_u2)&&($password==$password2))&&(($email_u!="")&&($password!="")))
    {
        setcookie("test","x", time() + (86400 * 30), "/");
-       setcookie("test2","$email_u2", time() + (86400 * 30), "/");
-       //echo "<h1>This is fine</h1>";
+       setcookie("test2",$email_u2, time() + (86400 * 30), "/");
+       echo "<h1>This is fine</h1>";
        header("Location:homepage.html");
    }
    else
    {
-         //echo "string1234";
+         echo "string1234";
          header("Location:login.html");
    }
 ?>
