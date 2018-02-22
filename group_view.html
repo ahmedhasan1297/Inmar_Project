@@ -1,0 +1,31 @@
+ <table class="table table-striped">  
+              <thead>
+                    <tr>
+                      <th>Group Name</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <!--<th>Add New Contact</th>
+                      <th>Delete Group</th>
+                      <th>Edit </th>
+
+                            <td><b><a href="#" ng-click="getcontact(x.groupid) data-toggle="modal" data-target="#myModal11"">Add Contact</a></b></td>-->
+                    </tr>
+              </thead>
+
+              <tbody>
+                          <tr ng-repeat="x in collect|orderBy:groupname">
+                            <td ><b>{{x.groupname}}</b></td>
+                            <td><b><a href="#"  data-toggle="modal" data-target="#myModal11"" ng-click="get_group_id(x.groupid)">Add Contact</a></b></td>
+                            <td ><b><a href="#/temp2" ng-click="getcontact(x.groupid)">view more....</a></b></td>
+                            <td></td>
+                          </tr>
+                    <!--<div class="panel panel-default" >
+                      <div class="panel-heading">{{x.groupname}}<a class="btn"><img src="addButton.png" width="20" height="20"></a></div>
+                      <div class="panel-body"><a href="#" ng-click="getcontact(x.group_id)">view more....</a></div>
+                    </div>-->
+              </tbody>
+            </table>
+            <span>{{collect[0].groupname}}</span>
+            <span>{{test2.info2[1].name}}</span>
+            <span>{{temp_collect[0].name}}</span>

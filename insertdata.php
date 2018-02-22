@@ -16,11 +16,11 @@
 			$mobileno=$_POST['mobileno'];
 			$mail=$_POST['mail'];
 			$pass=$_POST['pass'];
-			$gender=$_POST['gender'];
+			//$gender=$_POST['gender'];
 			$adhar=$_POST['adhar'];
 
 
-		$sql = "INSERT INTO personal_info(firstname,lastname,phone,adhar,email_u,password,gender ) VALUES ('$firstname', '$lastname', '$mobileno','$adhar','$mail','$pass','$gender')";
+		$sql = "INSERT INTO personal_info(firstname,lastname,phone,adhar,email_u,password,gender ) VALUES ('$firstname', '$lastname', '$mobileno','$adhar','$mail','$pass')";
 
 
 		if ($conn->query($sql) === TRUE) {
